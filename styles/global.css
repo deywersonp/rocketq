@@ -35,6 +35,16 @@ body, button, input, textarea{
   font-family: 'Open Sans', sans-serif;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
 .content{
   width: 100%;
   margin: 0 auto;

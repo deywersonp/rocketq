@@ -49,7 +49,6 @@ input, button, .button {
 }
 
 /* Separator Line */
-
 .separator{
   display: flex;
   align-items: center;
@@ -73,7 +72,6 @@ input, button, .button {
 }
 
 /*** Create Balls ***/
-
 .ball{
   background-color: var(--blue);
   width: 21.2rem;
