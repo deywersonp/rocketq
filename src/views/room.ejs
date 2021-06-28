@@ -24,6 +24,7 @@
 
   <!-- SCRIPT -->
   <script src="/scripts/main.js" defer type="module"></script>
+  <script src="/scripts/copy-data-id.js" defer type="module"></script>
 
 </head>
 
@@ -35,7 +36,11 @@
         <img src="/images/logo.svg" alt="Rocket.Q Logo">
       </a>
 
+
+      <input id="roomIdInput" class="sr-only" type="text" value="<%=roomId%>">
+
       <div class="buttons">
+
         <div class="button outlined" id="room-id" data-id="<%=roomId%>">
           #<%=roomId%> <img src="/images/copy.svg" alt="Copiar número da sala">
         </div>
