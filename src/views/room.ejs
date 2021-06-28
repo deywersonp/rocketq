@@ -24,6 +24,7 @@
 
   <!-- SCRIPT -->
   <script src="/scripts/main.js" defer type="module"></script>
+
 </head>
 
 <body>
@@ -50,7 +51,7 @@
         <h2>Faça sua pergunta</h2>
         <form action="/question/create/<%=roomId%>" method="POST">
           <label class="sr-only" for-id="question">O que você quer perguntar</label>
-          <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+          <textarea name="question" id="question" placeholder="O que você quer perguntar?" required="true"></textarea>
 
           <footer>
             <div>
@@ -69,50 +70,54 @@
 
           <%if(isNoQuestions) { %>
             <%- include('parts/no-question')%>
-          <% } %>
-          
-          <% questions.forEach(question =>{ %>
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/user.svg" alt="Avatar">
-                </div>
-                <div class="question">
-                  <p><%= question.title %></p>
-                </div>
-              </div>
-              <div class="actions">
-                <a href="#" class="check" data-id="<%=question.id%>">
-                  <img src="/images/check.svg" alt="Marcar como lida">
-                  Marcar como lida
-                </a>
-                <a href="#" class="delete" data-id="<%=question.id%>">
-                  <img src="/images/trash.svg" alt="Excluir">
-                  Excluir
-                </a>
-              </div>
-            </div>
-          <% });  %>
-          
+              <% } %>
 
-          <% questionsRead.forEach(questionRead =>{ %>
-            <div class="question-wrapper read">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/user.svg" alt="Avatar">
-                </div>
-                <div class="question">
-                  <p><%= questionRead.title %></p>
-                </div>
-              </div>
-              <div class="actions">
-                <a href="#" class="delete" data-id="<%=questionRead.id%>">
-                  <img src="/images/check.svg" alt="Excluir pergunta lida">
-                  Pergunta lida
-                </a>
-              </div>
-            </div>
-          <% });  %>
+                <% questions.forEach(question=>{ %>
+                  <div class="question-wrapper">
+                    <div class="question-content">
+                      <div class="user">
+                        <img src="/images/user.svg" alt="Avatar">
+                      </div>
+                      <div class="question">
+                        <p>
+                          <%= question.title %>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="actions">
+                      <a href="#" class="check" data-id="<%=question.id%>">
+                        <img src="/images/check.svg" alt="Marcar como lida">
+                        Marcar como lida
+                      </a>
+                      <a href="#" class="delete" data-id="<%=question.id%>">
+                        <img src="/images/trash.svg" alt="Excluir">
+                        Excluir
+                      </a>
+                    </div>
+                  </div>
+                  <% }); %>
+
+
+                    <% questionsRead.forEach(questionRead=>{ %>
+                      <div class="question-wrapper read">
+                        <div class="question-content">
+                          <div class="user">
+                            <img src="/images/user.svg" alt="Avatar">
+                          </div>
+                          <div class="question">
+                            <p>
+                              <%= questionRead.title %>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="actions">
+                          <a href="#" class="delete" data-id="<%=questionRead.id%>">
+                            <img src="/images/check.svg" alt="Excluir pergunta lida">
+                            Pergunta lida
+                          </a>
+                        </div>
+                      </div>
+                      <% }); %>
 
         </div>
       </section>
