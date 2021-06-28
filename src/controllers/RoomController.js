@@ -58,10 +58,17 @@ module.exports = {
     })
   },
 
-  enter(req, res) {
+  async enter(req, res) {
+    // Verifica se a sala existe
+    const db = await Database();
+    const roomId = req.body.roomId;
+    const existRoom = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`)
 
-    const roomId = req.body.roomId
 
-    res.redirect(`/room/${roomId}`);
+    if (typeof existRoom === "undefined") {
+      res.render('roomidincorrect')
+    } else {
+      res.redirect(`/room/${roomId}`);
+    }
   }
 }
