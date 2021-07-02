@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <title>Rocket.Q | Perguntas e Respostas</title>
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/styles/room.css">
   <link rel="stylesheet" href="/styles/modal.css">
 
+  <link rel="icon" href="/images/icon-rocketq.svg">
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,6 +26,7 @@
   <!-- SCRIPT -->
   <script src="/scripts/main.js" defer type="module"></script>
   <script src="/scripts/copy-room-data-id.js" defer type="module"></script>
+  <script src="/scripts/themeSwitch.js" defer type="module"></script>
 
 </head>
 
@@ -33,14 +35,12 @@
   <div id="room" class="content">
     <header>
       <a href="/">
-        <img src="/images/logo.svg" alt="Rocket.Q Logo">
-      </a>
 
+      </a>
 
       <input id="roomIdInput" class="sr-only" type="text" value="<%=roomId%>">
 
       <div class="buttons">
-
         <div class="button outlined" id="room-id" data-id="<%=roomId%>">
           #<%=roomId%> <img src="/images/copy.svg" alt="Copiar número da sala">
         </div>
@@ -48,6 +48,11 @@
           <img src="/images/users-white.svg" alt="Criar uma sala">
           Criar Sala
         </a>
+      </div>
+
+      <div class="toggleTheme">
+        <input id="switch" type="checkbox" name="theme">
+        <label id="theme-switch" for="switch">Toggle</label>
       </div>
     </header>
 
