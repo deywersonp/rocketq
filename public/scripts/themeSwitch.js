@@ -38,8 +38,7 @@ const changeColors = (colors) => {
 }
 
 /*****SWITCH LOGO *****/
-const logoPlace = document.querySelector('.content header a')
-
+const logo = document.querySelector('.content header a')
 
 /**Logo do DarkMode**/
 const darkModeLogo = document.createElement('div')
@@ -60,27 +59,30 @@ const initialLogo = document.createElement('img')
 initialLogo.src = "/images/logo.svg"
 initialLogo.alt = "Rocket.q Logo"
 initialLogo.classList.add('initialLogo')
-logoPlace.appendChild(initialLogo)
+logo.appendChild(initialLogo)
 
 
-/**** CALL SWITCHS *****/
-checkbox.addEventListener("change", ({ target }) => {
+function changeLogo(actualLogo, newLogo) {
+  logo.removeChild(actualLogo)
+  logo.appendChild(newLogo)
+}
 
-  if (target.checked) {
+function changeTheme() {
+  if (checkbox.checked) {
     changeColors(darkMode)
-    logoPlace.removeChild(initialLogo)
-    logoPlace.appendChild(darkModeLogo)
+    changeLogo(initialLogo, darkModeLogo)
     isChecked = true
   } else {
     changeColors(initialColors)
-    logoPlace.removeChild(darkModeLogo)
-    logoPlace.appendChild(initialLogo)
+    changeLogo(darkModeLogo, initialLogo)
     isChecked = false
   }
 
   localStorage.setItem('isChecked', JSON.stringify(isChecked))
 }
-)
+
+/**** CALL SWITCH *****/
+checkbox.addEventListener("change", changeTheme)
 
 
 /**** RECOVER THEME STATE FROM LOCAL STORAGE ****/
@@ -92,17 +94,7 @@ function getFromLocalStorage() {
     isChecked = JSON.parse(reference)
     checkbox.checked = isChecked
   }
-
-  if (checkbox.checked) {
-    changeColors(darkMode)
-    logoPlace.removeChild(initialLogo)
-    logoPlace.appendChild(darkModeLogo)
-  } else {
-    changeColors(initialColors)
-    logoPlace.removeChild(darkModeLogo)
-    logoPlace.appendChild(initialLogo)
-  }
-
+  changeTheme();
 }
 
 getFromLocalStorage()
