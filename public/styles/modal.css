@@ -35,13 +35,13 @@
   font-weight: 700;
   margin-bottom: 1.2rem;
 
-  color: var(--black);
+  color: var(--modal-title);
 }
 
 .modal-wrapper .modal p {
   margin-bottom: 2.4rem;
 
-  color: var(--grey-dark);
+  color: var(--modal-text);
 }
 
 .modal-wrapper .modal input {
@@ -54,7 +54,7 @@
   border-radius: 0.8rem;
 
   outline: none;
-  color: var(--black);
+  color: #0d114f;
 }
 
 .modal-wrapper .modal .buttons {

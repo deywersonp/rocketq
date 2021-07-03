@@ -61,6 +61,7 @@
   resize: none;
   background: transparent;
   outline: none;
+  color: var(--textarea-text);
 
   width: 100%;
 }

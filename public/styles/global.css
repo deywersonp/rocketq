@@ -21,6 +21,10 @@ html {
   --grey-light: #e5eaf1;
   --grey-medium: #eaecf2;
 
+  --modal-title: var(--black);
+  --modal-text: var(--grey-dark);
+  --textarea-text: black;
+
   font-size: 62.5%;
 }
 

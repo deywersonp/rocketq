@@ -16,4 +16,4 @@ server.use(express.urlencoded({ extended: true }));
 
 server.use(route);
 
-server.listen(3000, () => console.log("RODANDO"));
+server.listen(3000, () => console.log("RODANDO NA PORTA 3000"));

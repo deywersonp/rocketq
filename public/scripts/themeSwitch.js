@@ -1,5 +1,8 @@
 const html = document.querySelector('html')
 const checkbox = document.querySelector('input[name=theme]')
+let isChecked = false
+
+/***CREATE THEMES***/
 
 const getStyle = (element, style) =>
   window
@@ -9,11 +12,19 @@ const getStyle = (element, style) =>
 const initialColors = {
   background: getStyle(html, "--background"),
   black: getStyle(html, "--black"),
+  greyBlue: getStyle(html, "--grey-blue"),
+  modalTitleColor: getStyle(html, "--modal-title-color"),
+  modalTextColor: getStyle(html, "--modal-text-color"),
+  textareaTextColor: getStyle(html, "--textarea-text-color"),
 }
 
 const darkMode = {
   background: '#212226',
-  black: '#434343',
+  black: '#cfcccc',
+  greyBlue: '#cfcccc',
+  modalTitle: 'black',
+  modalText: '#212226',
+  textareaText: 'white',
 }
 
 const transformKey = (key) =>
@@ -26,43 +37,78 @@ const changeColors = (colors) => {
   )
 }
 
-checkbox.addEventListener("change", ({ target }) => {
-  if (target.checked) {
-    changeColors(darkMode)
-    logoPlace.removeChild(initialLogo)
-    logoPlace.appendChild(divDarkModeLogo)
-  } else {
-    changeColors(initialColors)
-    logoPlace.removeChild(divDarkModeLogo)
-    logoPlace.appendChild(initialLogo)
-  }
-}
-)
-
-
-
 /*****SWITCH LOGO *****/
 const logoPlace = document.querySelector('.content header a')
 
 
-/**LOGO DO DARKMODE**/
-const divDarkModeLogo = document.createElement('div')
-divDarkModeLogo.id = 'logo'
+/**Logo do DarkMode**/
+const darkModeLogo = document.createElement('div')
+darkModeLogo.id = 'logo'
 
-const darkModeLogo = document.createElement('img')
-darkModeLogo.src = "/images/icon-rocketq.svg"
-darkModeLogo.alt = "Logo Rocket.q"
-divDarkModeLogo.appendChild(darkModeLogo)
+const darkModeIcon = document.createElement('img')
+darkModeIcon.src = "/images/icon-rocketq.svg"
+darkModeIcon.alt = "Rocket.q Logo - Icon"
+darkModeLogo.appendChild(darkModeIcon)
 
-const darkModeTextLogo = document.createElement('img')
-darkModeTextLogo.src = "/images/logo-text.png"
-darkModeTextLogo.alt = "Rocket.q Logo - Text"
-divDarkModeLogo.appendChild(darkModeTextLogo)
+const darkModeIconText = document.createElement('img')
+darkModeIconText.src = "/images/logo-text.png"
+darkModeIconText.alt = "Rocket.q Logo - Text"
+darkModeLogo.appendChild(darkModeIconText)
 
-/**LOGO DO INITIAL MODE**/
+/**Logo do initialMode**/
 const initialLogo = document.createElement('img')
-initialLogo.classList.add('initialLogo')
 initialLogo.src = "/images/logo.svg"
 initialLogo.alt = "Rocket.q Logo"
+initialLogo.classList.add('initialLogo')
 logoPlace.appendChild(initialLogo)
+
+
+/**** CALL SWITCHS *****/
+checkbox.addEventListener("change", ({ target }) => {
+
+  if (target.checked) {
+    changeColors(darkMode)
+    logoPlace.removeChild(initialLogo)
+    logoPlace.appendChild(darkModeLogo)
+    isChecked = true
+  } else {
+    changeColors(initialColors)
+    logoPlace.removeChild(darkModeLogo)
+    logoPlace.appendChild(initialLogo)
+    isChecked = false
+  }
+
+  localStorage.setItem('isChecked', JSON.stringify(isChecked))
+}
+)
+
+
+/**** RECOVER THEME STATE FROM LOCAL STORAGE ****/
+function getFromLocalStorage() {
+
+  const reference = localStorage.getItem('isChecked')
+
+  if (reference) {
+    isChecked = JSON.parse(reference)
+    checkbox.checked = isChecked
+  }
+
+  if (checkbox.checked) {
+    changeColors(darkMode)
+    logoPlace.removeChild(initialLogo)
+    logoPlace.appendChild(darkModeLogo)
+  } else {
+    changeColors(initialColors)
+    logoPlace.removeChild(darkModeLogo)
+    logoPlace.appendChild(initialLogo)
+  }
+
+}
+
+getFromLocalStorage()
+
+
+
+
+
 
