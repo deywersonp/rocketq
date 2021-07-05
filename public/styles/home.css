@@ -24,7 +24,6 @@ main {
 
   display: flex;
   align-items: center;
-  /* margin-top: -12rem; */
 }
 
 main .container {
@@ -96,3 +95,119 @@ button,
   bottom: -15rem;
   right: 5.6rem;
 }
+
+/**** MEDIA QUERIES ****/
+
+/***** TABLETS *****/
+@media screen and (max-width: 768px) {
+  .toggleTheme {
+    right: 2rem;
+  }
+
+  input,
+  button,
+  .button {
+    width: 93%;
+  }
+
+  .separator {
+    margin: 3rem;
+    width: 73%;
+  }
+}
+
+/***** MOBILE LARGE SCREEN*****/
+@media screen and (max-width: 425px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #darkLogo {
+    margin-left: 8.5rem;
+  }
+
+  .toggleTheme {
+    left: 38rem;
+    top: 5rem;
+  }
+
+  main h2 {
+    margin-top: 2.4rem;
+  }
+
+  input,
+  button,
+  .button {
+    width: 80%;
+  }
+
+  button,
+  .button {
+    margin: auto;
+  }
+
+  .separator {
+    margin: 3rem;
+    width: 85%;
+  }
+
+  a.button.outlined {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/***** MOBILE SMALL & MEDIUM SCREEN *****/
+@media screen and (max-width: 375px) {
+  #darkLogo {
+    margin-left: 6.5rem;
+  }
+
+  .toggleTheme {
+    left: 31rem;
+    top: 6rem;
+  }
+
+  .separator {
+    margin: 3rem;
+    width: 82%;
+  }
+
+  a.button.outlined {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #darkLogo {
+    margin-left: 4.5rem;
+  }
+}
+
+/* *** 4K SCREEN - IDEA ***
+@media screen and (min-width: 2560px) {
+  .content .initialLogo {
+    width: 30rem;
+  }
+  #theme-switch {
+    width: 20rem;
+    height: 10rem;
+  }
+
+  #theme-switch::after {
+    width: 7.5rem;
+    height: 7.5rem;
+    top: 1.2rem;
+    left: 1rem;
+  }
+
+  #switch:checked + #theme-switch::after {
+    left: calc(100% - 1rem);
+  }
+
+  #theme-switch:active:after {
+    width: 15rem;
+  }
+} */

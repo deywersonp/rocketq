@@ -189,3 +189,128 @@
   top: 11rem;
   right: 13.9rem;
 }
+
+/**** MEDIA QUERIES ****/
+
+/***** DESKTOPS *****/
+@media screen and (max-width: 1440px) {
+  .toggleTheme {
+    top: 12rem;
+    right: 16.1rem;
+  }
+
+  section#questions {
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .toggleTheme {
+    top: 12rem;
+    right: 10.5rem;
+  }
+}
+
+/***** TABLETS *****/
+@media screen and (max-width: 768px) {
+  .toggleTheme {
+    top: 12rem;
+    right: 8rem;
+  }
+}
+
+/***** MOBILE LARGE SCREEN*****/
+@media screen and (max-width: 425px) {
+  #room header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #room header .buttons {
+    margin-top: 5rem;
+  }
+
+  .toggleTheme {
+    top: 9rem;
+    right: 5.6rem;
+  }
+
+  section#questions {
+    padding-bottom: 3rem;
+  }
+
+  .question-wrapper .question-content p {
+    padding-bottom: 2rem;
+  }
+}
+
+/***** MOBILE SMALL & MEDIUM SCREEN *****/
+@media screen and (max-width: 375px) {
+  #room header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #room header .buttons {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 50%;
+    grid-template-areas:
+      "top top"
+      "bottomLeft bottomRight";
+  }
+
+  #room header .buttons .button:nth-child(1) {
+    width: 120%;
+    grid-area: bottomLeft;
+    margin-right: 0;
+  }
+
+  #room header .buttons .button:nth-child(2) {
+    width: 100%;
+    grid-area: top;
+    margin: 3rem 0 1rem 0;
+  }
+
+  .toggleTheme {
+    top: 18.5rem;
+    right: 4.9rem;
+    grid-area: bottomRight;
+  }
+
+  #question-form h2 {
+    font-size: 2.5rem;
+    line-height: 1.2rem;
+    margin: 5rem 0 3.4rem 0;
+  }
+  #question-form form footer > div {
+    font-size: 0.9rem;
+  }
+
+  #question-form form footer > div img {
+    margin-right: 0.2rem;
+  }
+
+  #question-form form footer button {
+    height: 3rem;
+    width: 7rem;
+  }
+
+  section#questions {
+    padding-bottom: 5rem;
+  }
+}
+
+/***** MOBILE SMALL SCREEN *****/
+@media screen and (max-width: 320px) {
+  .toggleTheme {
+    top: 19.3rem;
+    right: 3.9rem;
+    grid-area: bottomRight;
+  }
+}

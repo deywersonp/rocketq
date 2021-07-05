@@ -42,7 +42,7 @@ const logo = document.querySelector('.content header a')
 
 /**Logo do DarkMode**/
 const darkModeLogo = document.createElement('div')
-darkModeLogo.id = 'logo'
+darkModeLogo.id = 'darkLogo'
 
 const darkModeIcon = document.createElement('img')
 darkModeIcon.src = "/images/icon-rocketq.svg"
@@ -55,11 +55,16 @@ darkModeIconText.alt = "Rocket.q Logo - Text"
 darkModeLogo.appendChild(darkModeIconText)
 
 /**Logo do initialMode**/
-const initialLogo = document.createElement('img')
-initialLogo.src = "/images/logo.svg"
-initialLogo.alt = "Rocket.q Logo"
-initialLogo.classList.add('initialLogo')
-logo.appendChild(initialLogo)
+const initialModeLogo = document.createElement('div')
+initialModeLogo.id = 'initialLogoMode'
+
+const initialLogoIconText = document.createElement('img')
+initialLogoIconText.src = "/images/logo.svg"
+initialLogoIconText.alt = "Rocket.q Logo"
+initialLogoIconText.classList.add('initialLogo')
+initialModeLogo.appendChild(initialLogoIconText)
+logo.appendChild(initialModeLogo)
+
 
 
 function changeLogo(actualLogo, newLogo) {
@@ -70,11 +75,11 @@ function changeLogo(actualLogo, newLogo) {
 function changeTheme() {
   if (checkbox.checked) {
     changeColors(darkMode)
-    changeLogo(initialLogo, darkModeLogo)
+    changeLogo(initialModeLogo, darkModeLogo)
     isChecked = true
   } else {
     changeColors(initialColors)
-    changeLogo(darkModeLogo, initialLogo)
+    changeLogo(darkModeLogo, initialModeLogo)
     isChecked = false
   }
 

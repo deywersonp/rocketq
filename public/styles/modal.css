@@ -15,6 +15,8 @@
 
   visibility: hidden;
   opacity: 0;
+
+  z-index: 1;
 }
 
 .modal-wrapper .modal {
@@ -70,4 +72,27 @@
 
 .modal-wrapper .modal .buttons > .button {
   margin-right: 0.8rem;
+}
+
+/*** MEDIA QUERIES ***/
+
+/***** MOBILE SMALL, MEDIUM & LARGE SCREEN *****/
+@media screen and (max-width: 425px) {
+  .modal-wrapper .modal {
+    padding: 5rem 2rem 3rem 2rem;
+  }
+
+  .modal-wrapper .modal .buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "top"
+      "bottom";
+  }
+
+  .modal-wrapper .modal .buttons > .button {
+    margin-right: 0;
+    margin-top: 0.5rem;
+    grid-area: bottom;
+  }
 }
