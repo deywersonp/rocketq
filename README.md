@@ -35,16 +35,16 @@ This project was developed using these techs:
 
 ## 💻 Project
 
-O Rocket.Q é uma aplicação de interação através de perguntas, sendo possível criar uma sala para internautas anônimos fazerem perguntas e o criador da sala em posse de uma senha gerenciar essas perguntas e marcar como lidas.
+Rocket.Q is an application of interaction through questions, it is possible to create a room for anonymous Internet users to ask questions and the creator of the room, with a password, to manage these questions and mark them as read.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/vp3iFfd1ohCbHyDX9jCiQi/Roquet.q). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+You can see the layout of this project through [this link](https://www.figma.com/file/vp3iFfd1ohCbHyDX9jCiQi/Roquet.q). It's necessary have an account on [Figma](https://figma.com) to access.
 
 ## :memo: License
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+This project is under MIT license.
 
 ---
 
-Feito com ♥ by <a href="https://github.com/deywersonp">Deywerson Pereira</a>
+Made with ♥ by <a href="https://github.com/deywersonp">Deywerson Pereira</a>
