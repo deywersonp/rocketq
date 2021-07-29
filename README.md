@@ -7,8 +7,9 @@
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-services-used">Services Used</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-getting-started">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
@@ -80,7 +81,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## 📌 How to Use
 
+<br>
 
+## 🕵 Features
+
+The main features of the application are:
+ - Create a room
+ - Access an existing room
+ - Send questions
+ - Delete questions
+ - Mark questions as read
+ - Dark mode
+ - Responsive
+ 
 <br>
 
 ## 🔖 Layout
@@ -93,6 +106,17 @@ You can see the layout of this project through [this link](https://www.figma.com
 
 This project is under MIT license.
 
+<br>
+
+ > In case of sensitive bugs like security vulnerabilities, please contact
+ > <a href = "mailto:deywerson.pereira@gmail.com">deywerson.pereira@gmail.com</a> directly instead of using issue tracker. We value your effort
+ > to improve the security and privacy of this project!
+ <br>
+ 
 ---
+  
+
+      
+Please follow on github and join us! Thanks for visiting me and good coding!
 
 Made with ♥ by <a href="https://github.com/deywersonp">Deywerson Pereira</a>
