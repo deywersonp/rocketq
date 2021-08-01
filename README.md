@@ -36,18 +36,20 @@ This application is hosted on Heroku, [click here to see it](http://rocketq-hero
 
 This project was developed using these techs:
 
-- HTML
-- CSS
-- JavaScript
-- NodeJS
-- Express
-- EJS
-- SQLite
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [NodeJS](https://nodejs.org/en/about/)
+- [Express](https://expressjs.com/pt-br/)
+- [EJS](https://ejs.co/#docs)
+- [SQLite](https://www.sqlite.org/index.html)
+
 <br>
 
 ## 👨‍🔧 Services Used
 - GitHub
-- Heroku
+- [Heroku](https://www.heroku.com/about)
+
 <br>
 
 ## 🎮 Getting Started
@@ -68,7 +70,9 @@ If you want run this code, you can start cloning the repository using HTTP or SS
 
 `yarn start` Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-<br><br><br>
+
+<br><br>
+
 **Dependencies**
 - Ejs
 - Express
@@ -77,6 +81,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 **Dev Dependencies**
 - Nodemon
+
 <br>
 
 ## 📌 How to Use
